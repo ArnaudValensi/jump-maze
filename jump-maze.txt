@@ -1,0 +1,92 @@
+title My Test Game
+author My Arnaud Valensi
+homepage www.puzzlescript.net
+
+========
+OBJECTS
+========
+
+Background 
+GREEN  
+
+Target 
+DarkBlue    
+
+Wall 
+BROWN
+
+Player 
+Blue   
+
+Crate 
+Orange
+
+One
+Yellow
+.00..
+..0..
+..0..
+..0..
+..0..
+
+Two
+Yellow
+.000.
+...0.
+.000.
+.0...
+.000.
+
+=======
+LEGEND
+=======
+
+. = Background
+# = Wall
+P = Player
+* = Crate
+@ = Crate and Target
+O = Target
+1 = One
+2 = Two
+
+=======
+SOUNDS
+=======
+
+================
+COLLISIONLAYERS
+================
+
+Background
+Target, One, Two
+Player, Wall, Crate
+
+======
+RULES     
+======     
+
+[ > Player | Crate One ] -> [ > Player | One > Crate ]
+[ > Player | Crate Two | | ] -> [ > Player | Two | | Crate ]
+[ > Player | Crate ] -> [ > Player | > Crate  ]  
+
+
+==============
+WINCONDITIONS
+==============
+
+All Target on Crate     
+
+=======     
+LEVELS
+=======
+
+########
+#......#
+#..*...#
+#..21..#
+#p..11.#
+#..12o.#
+#......#
+########
+
